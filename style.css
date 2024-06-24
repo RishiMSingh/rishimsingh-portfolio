@@ -387,3 +387,252 @@ body {
   width: 100%;
   opacity: .8;
 }
+
+/* ============== Timeline Section ============== */
+
+.timeline {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	position: relative;
+}
+
+.timeline__event {
+	margin-bottom: 20px; /* Example value for spacing */
+	position: relative;
+	display: flex;
+	margin: 20px 0; /* Example value for spacing */
+	border-radius: 10px; /* Example value for border radius */
+	align-self: center;
+	width: 50vw;
+}
+
+.timeline__event:nth-child(2n + 1) {
+	flex-direction: row-reverse;
+}
+
+.timeline__event:nth-child(2n + 1) .timeline__event__date {
+	border-radius: 0 10px 10px 0; /* Example value for border radius */
+}
+
+.timeline__event:nth-child(2n + 1) .timeline__event__content {
+	border-radius: 10px 0 0 10px; /* Example value for border radius */
+}
+
+.timeline__event:nth-child(2n + 1) .timeline__event__icon:before {
+	content: "";
+	width: 2px;
+	height: 100%;
+	background: #999; /* Example value for color */
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	right: auto;
+	z-index: -1;
+	transform: translateX(-50%);
+	animation: fillTop 2s forwards 4s ease-in-out;
+}
+
+.timeline__event:nth-child(2n + 1) .timeline__event__icon:after {
+	content: "";
+	width: 100%;
+	height: 2px;
+	background: #999; /* Example value for color */
+	position: absolute;
+	right: 0;
+	z-index: -1;
+	top: 50%;
+	left: auto;
+	transform: translateY(-50%);
+	animation: fillLeft 2s forwards 4s ease-in-out;
+}
+
+.timeline__event__title {
+	font-size: 1.2rem;
+	line-height: 1.4;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #333; /* Example value for color */
+	letter-spacing: 1.5px;
+}
+
+.timeline__event__content {
+	padding: 20px; /* Example value for spacing */
+	box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+	background: #fff;
+	width: 100%; /* Example value for content width */
+	border-radius: 0 10px 10px 0; /* Example value for border radius */
+}
+
+.timeline__event__date {
+	color: #999; /* Example value for color */
+	font-size: 1.5rem;
+	font-weight: 600;
+	background: #333; /* Example value for color */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	padding: 0 20px; /* Example value for spacing */
+	border-radius: 10px 0 0 10px; /* Example value for border radius */
+}
+
+.timeline__event__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #333; /* Example value for color */
+	padding: 20px; /* Example value for spacing */
+	align-self: center;
+	margin: 0 20px; /* Example value for spacing */
+	background: #999; /* Example value for color */
+	border-radius: 50%; /* Example value for border radius */
+	width: 40px; /* Example value for circle size */
+	box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+	height: 40px; /* Example value for circle size */
+	position: relative;
+}
+
+.timeline__event__icon:before {
+	content: "";
+	width: 2px;
+	height: 100%;
+	background: #999; /* Example value for color */
+	position: absolute;
+	top: 0%;
+	z-index: -1;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: fillTop 2s forwards 4s ease-in-out;
+}
+
+.timeline__event__icon:after {
+	content: "";
+	width: 100%;
+	height: 2px;
+	background: #999; /* Example value for color */
+	position: absolute;
+	left: 0%;
+	z-index: -1;
+	top: 50%;
+	transform: translateY(-50%);
+	animation: fillLeftOdd 2s forwards 4s ease-in-out;
+}
+
+.timeline__event__description {
+	flex-basis: 100%;
+}
+
+.timeline__event--type2:after {
+	background: #666; /* Example value for color */
+}
+
+.timeline__event--type2 .timeline__event__date {
+	color: #444; /* Example value for color */
+	background: #666; /* Example value for color */
+}
+
+.timeline__event--type2:nth-child(2n + 1) .timeline__event__icon:before,
+.timeline__event--type2:nth-child(2n + 1) .timeline__event__icon:after {
+	background: #444; /* Example value for color */
+}
+
+.timeline__event--type2 .timeline__event__icon {
+	background: #444; /* Example value for color */
+	color: #666; /* Example value for color */
+}
+
+.timeline__event--type2 .timeline__event__icon:before,
+.timeline__event--type2 .timeline__event__icon:after {
+	background: #444; /* Example value for color */
+}
+
+.timeline__event--type2 .timeline__event__title {
+	color: #666; /* Example value for color */
+}
+
+.timeline__event--type3:after {
+	background: #888; /* Example value for color */
+}
+
+.timeline__event--type3 .timeline__event__date {
+	color: #555; /* Example value for color */
+	background-color: #888; /* Example value for color */
+}
+
+.timeline__event--type3:nth-child(2n + 1) .timeline__event__icon:before,
+.timeline__event--type3:nth-child(2n + 1) .timeline__event__icon:after {
+	background: #555; /* Example value for color */
+}
+
+.timeline__event--type3 .timeline__event__icon {
+	background: #555; /* Example value for color */
+	color: #888; /* Example value for color */
+}
+
+.timeline__event--type3 .timeline__event__icon:before,
+.timeline__event--type3 .timeline__event__icon:after {
+	background: #555; /* Example value for color */
+}
+
+.timeline__event--type3 .timeline__event__title {
+	color: #888; /* Example value for color */
+}
+
+.timeline__event:last-child .timeline__event__icon:before {
+	content: none;
+}
+
+@media (max-width: 786px) {
+	.timeline__event {
+		flex-direction: column;
+		align-self: center;
+	}
+	.timeline__event__content {
+		width: 100%;
+	}
+	.timeline__event__icon {
+		border-radius: 10px 10px 0 0; /* Example value for border radius */
+		width: 100%;
+		margin: 0;
+		box-shadow: none;
+	}
+	.timeline__event__icon:before,
+	.timeline__event__icon:after {
+		display: none;
+	}
+	.timeline__event__date {
+		border-radius: 0;
+		padding: 20px; /* Example value for spacing */
+	}
+	.timeline__event:nth-child(2n + 1) {
+		flex-direction: column;
+		align-self: center;
+	}
+	.timeline__event:nth-child(2n + 1) .timeline__event__date {
+		border-radius: 0;
+		padding: 20px; /* Example value for spacing */
+	}
+	.timeline__event:nth-child(2n + 1) .timeline__event__icon {
+		border-radius: 10px 10px 0 0; /* Example value for border radius */
+		margin: 0;
+	}
+}
+
+@keyframes fillLeft {
+	100% {
+		right: 100%;
+	}
+}
+
+@keyframes fillTop {
+	100% {
+		top: 100%;
+	}
+}
+
+@keyframes fillLeftOdd {
+	100% {
+		left: 100%;
+	}
+}
