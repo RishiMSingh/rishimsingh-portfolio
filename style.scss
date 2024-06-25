@@ -9,7 +9,7 @@
 
 :root {
   // colors
-  @include defineColorHSL(--cd-color-1, 206, 21%, 24%); // Navy
+  @include defineColorHSL(--cd-color-white, 0, 0%, 100%); // White
   @include defineColorHSL(--cd-color-2, 205, 38%, 89%); // Blue
   @include defineColorHSL(--cd-color-3, 207, 10%, 55%); // Grey
   @include defineColorHSL(--cd-color-4, 111, 51%, 60%); // Green
