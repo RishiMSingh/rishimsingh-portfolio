@@ -13,8 +13,8 @@
   @include defineColorHSL(--cd-color-white, 0, 0%, 100%); // Blue
   @include defineColorHSL(--cd-color-3, 207, 10%, 55%); // Grey
   @include defineColorHSL(--cd-color-white, 0, 0%, 100%); // Green
-  @include defineColorHSL(--cd-color-5, 356, 53%, 49%); // Red
-  @include defineColorHSL(--cd-color-6, 47, 85%, 61%);  // Yellow
+  @include defineColorHSL(--cd-color-5, 264, 77%, 67%); // Red
+  @include defineColorHSL(--cd-color-6, 181, 100%, 100%);  // Yellow
 
   // header
   --cd-header-height: 200px;
@@ -105,10 +105,11 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  background-color: #ffffff;
   box-shadow: 0 0 0 4px var(--color-white), inset 0 2px 0 rgba(#000, 0.08), 0 3px 0 4px rgba(#000, 0.05);
 
   img {
-    width: 24px;
+    width: px;
     height: 24px;
   }
 
@@ -134,7 +135,7 @@
 }
 
 .cd-timeline__img--location {
-  background-color: var(--cd-color-6);
+  background-color: pink;
 }
 
 .cd-timeline__content {
@@ -258,33 +259,4 @@
   100% {
     transform: translateX(0);    
   }
-}
-
-
-
-
-.summary {
-    max-width: 600px;
-    margin: auto;
-}
-.job-title {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-.company {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-.date {
-    font-size: 0.9em;
-    color: gray;
-}
-.section-key-items {
-    margin-bottom: 20px;
-}
-.section-title {
-    font-weight: bold;
-}
-.section-content {
-    margin-left: 20px;
 }
