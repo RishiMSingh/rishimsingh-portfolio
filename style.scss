@@ -12,7 +12,7 @@
   @include defineColorHSL(--cd-color-white, 0, 0%, 100%); // White
   @include defineColorHSL(--cd-color-white, 0, 0%, 100%); // Blue
   @include defineColorHSL(--cd-color-3, 207, 10%, 55%); // Grey
-  @include defineColorHSL(--cd-color-4, 111, 51%, 60%); // Green
+  @include defineColorHSL(--cd-color-white, 0, 0%, 100%); // Green
   @include defineColorHSL(--cd-color-5, 356, 53%, 49%); // Red
   @include defineColorHSL(--cd-color-6, 47, 85%, 61%);  // Yellow
 
@@ -258,4 +258,33 @@
   100% {
     transform: translateX(0);    
   }
+}
+
+
+
+
+.summary {
+    max-width: 600px;
+    margin: auto;
+}
+.job-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.company {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.date {
+    font-size: 0.9em;
+    color: gray;
+}
+.section-key-items {
+    margin-bottom: 20px;
+}
+.section-title {
+    font-weight: bold;
+}
+.section-content {
+    margin-left: 20px;
 }
