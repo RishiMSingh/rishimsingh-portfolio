@@ -65,7 +65,7 @@ function handleScrollForCounters() {
 window.addEventListener('scroll', handleScrollForCounters);
 
 // Initialize typing animation
-const typingAnimation = new TypingAnimation("#typing-text", ["Aspiring Data Scientist"]);
+const typingAnimation = new TypingAnimation("#typing-text", ["Aspiring Data Scientist/ML Engineer"]);
 
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".navbar");
